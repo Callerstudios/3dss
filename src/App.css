@@ -1,14 +1,50 @@
 .App {
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
-
+*{
+  transform-style: preserve-3d;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.human{
+  width: 200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  flex-direction: column;
+  height: 100vh;
+  /* background-color: green; */
+  transform-style: preserve-3d;
+  transform: rotateY(20deg);
+  animation: rotate 3s linear infinite forwards;
+}
+.head{
+  z-index: 10;
+  position: relative;
+  width: 100%;
+
+}
+.left-hand, .right-hand{
+  position: absolute;
+  transform-origin: 0 0;
+  transform: rotate(90deg) translateZ(-15px);
+}
+.left-hand{
+  transform:rotate(90deg) translateY(-150%) translateZ(-15px);
+}
+.chest{
+  position: absolute;
+}
+.body{
+  width: 100%;
+  position: relative;
+  /* width: 100px;
+  height: 100px; */
+  /* background-color: blue; */
+  /* transform: translateZ(100px); */
 }
 
 @media (prefers-reduced-motion: no-preference) {
