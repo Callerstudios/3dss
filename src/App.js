@@ -8,17 +8,31 @@ function App() {
         <div className="head">
           <Box width="50px" height="50px" stretch="30px" />
         </div>
+        <div className="neck">
+          <Box width="20px" height="15px" stretch="20px" />
+        </div>
         <div className="body">
           <div className="left-hand">
-            <Box width="20px" height="70px" stretch="30px" />
+            <div className="arm">
+              <Box width="19px" height="50px" stretch="30px" />
+            <div className="hand">
+              <Box width="20px" height="60px" stretch="30px" />
+            </div>
+            </div>
           </div>
           <div className="chest">
             <Box width="50px" height="100px" stretch="30px" />
           </div>
           <div className="right-hand">
-            <Box width="20px" height="70px" stretch="30px" />
+            <div className="arm">
+              <Box width="20px" height="50px" stretch="30px" />
+            <div className="hand">
+              <Box width="20px" height="60px" stretch="30px" />
+            </div>
+            </div>
           </div>
         </div>
+        <div className="legs"></div>
       </div>
     </div>
   );
