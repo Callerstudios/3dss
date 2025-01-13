@@ -11,40 +11,47 @@
 .human{
   width: 200px;
   margin: 0 auto;
+  padding-top: 100px;
+  /* justify-content: center; */
   display: flex;
   align-items: center;
-  padding-top: 100px;
   flex-direction: column;
   height: 100vh;
   /* background-color: green; */
   transform-style: preserve-3d;
-  transform: rotateY(20deg);
-  animation: rotate 3s linear infinite forwards;
+  transform: rotateY(-100deg) rotateX(30deg);
+  /* animation: rotate 3s linear infinite forwards; */
 }
 .head{
   z-index: 10;
   position: relative;
-  width: 100%;
+  background-color: blue;
+  width: fit-content;
+  transform: translateZ(15px);
 
 }
 .left-hand, .right-hand{
+  background-color: brown;
   position: absolute;
-  transform-origin: 0 0;
-  transform: rotate(90deg) translateZ(-15px);
+  top: -20px;
+  transform: rotate(110deg) translateY(-50px);
 }
 .left-hand{
-  transform:rotate(90deg) translateY(-150%) translateZ(-15px);
+  transform:rotate(70deg) translateY(50px);
 }
 .chest{
-  position: absolute;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: row;
 }
 .body{
   width: 100%;
   position: relative;
-  /* width: 100px;
-  height: 100px; */
   /* background-color: blue; */
-  /* transform: translateZ(100px); */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  transform: translateZ(15px);
 }
 
 @media (prefers-reduced-motion: no-preference) {

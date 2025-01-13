@@ -5,7 +5,11 @@ const Box = (props) => {
   return (
     <div
       className="box"
-      style={{ "--width": props.width, "--height": props.height }}
+      style={{
+        "--width": props.width,
+        "--height": props.height,
+        "--stretch": props.stretch,
+      }}
     >
       <div className="front-face"></div>
       <div className="left-face"></div>

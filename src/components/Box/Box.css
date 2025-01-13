@@ -4,6 +4,7 @@
   height: var(--height);
   transform-style: preserve-3d;
   transform: rotateY(0) rotateX(0);
+  background-color: purple;
   /* animation: rotate 3s linear infinite forwards; */
   & .front-face,
   .right-face,
@@ -18,11 +19,15 @@
     /* transform: rotateY(45deg); */
   }
   & .right-face {
+    width: var(--stretch);
+    height: var(--height);
     background-color: green;
     transform: translateX(var(--width)) rotateY(90deg);
     transform-origin: 0 0;
   }
   & .left-face {
+    width: var(--stretch);
+    height: var(--height);
     background-color: blue;
     transform: rotateY(90deg);
     transform-origin: 0 0;
@@ -36,7 +41,7 @@
   }
   & .back-face {
     background-color: purple;
-    transform: translateZ(calc(-1 * var(--width)));
+    transform: translateZ(calc(-1 * var(--stretch)));
     transform-origin: 0 0;
   }
   & .bottom-face {
