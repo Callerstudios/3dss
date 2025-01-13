@@ -24,6 +24,7 @@
   }
   .front-face {
     background: linear-gradient(to bottom, yellow, blue);
+    /* background-color: blue; */
   }
   & .right-face {
     width: var(--stretch);
@@ -39,6 +40,11 @@
     transform: rotateY(90deg);
     transform-origin: 0 0;
   }
+  & .back-face {
+    background-color: var(--color);
+    transform: translateZ(calc(-1 * var(--stretch)));
+    transform-origin: 0 0;
+  }
   & .top-face {
     width: var(--width);
     height: var(--stretch);
@@ -46,16 +52,11 @@
     transform: rotateX(90deg) translateY(calc(-1 * var(--stretch)));
     transform-origin: 0 0;
   }
-  & .back-face {
-    background-color: var(--color);
-    transform: translateZ(calc(-1 * var(--stretch)));
-    transform-origin: 0 0;
-  }
   & .bottom-face {
     width: var(--width);
     height: var(--stretch);
     background-color: red;
-    transform: rotateX(90deg) translateZ(-50px) translateY(-30px);
+    transform: rotateX(-90deg) translateZ(var(--height));
     transform-origin: 0 0;
   }
 }

@@ -18,8 +18,8 @@
   flex-direction: column;
   height: 100vh;
   transform-style: preserve-3d;
-  transform: rotateY(160deg) rotateX(20deg);
-  /* animation: rotate 3s linear infinite forwards; */
+  transform: rotateY(10deg) rotateX(10deg);
+  animation: rotate 3s linear infinite forwards;
 }
 .head {
   z-index: 10;
@@ -32,8 +32,8 @@
 .neck {
   transform: translateZ(-5px);
 }
-.right-hand{
-  transform: translateX(-15px) translateY(4px) rotate(90deg);
+.right-hand {
+  transform: translateX(-15px) translateY(-4px) rotate(-20deg);
   & .arm {
     position: absolute;
     top: 0;
@@ -49,7 +49,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%) rotateZ(-70deg);
+    transform: translateX(-50%) rotateZ(-70deg) translateZ(-1px);
     transform-origin: 100% 0;
   }
 }
@@ -60,7 +60,7 @@
 }
 .body {
   width: 100px;
-  min-height: 20px;
+  min-height: 100px;
   position: relative;
 }
 .left-hand .hand {
@@ -75,36 +75,22 @@
   transform: rotate(-40deg) translateY(-5px);
   transform-origin: 100% 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.legs{
+  width: 60px;
+  height: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @keyframes rotateRight {
-  0%{
+  0% {
     transform: translateX(-15px) translateY(4px) rotate(-10deg);
   }
-  50%{
+  50% {
     transform: translateX(-15px) translateY(4px) rotate(90deg);
   }
-  100%{
+  100% {
     transform: translateX(-15px) translateY(4px) rotate(-10deg);
   }
 }
