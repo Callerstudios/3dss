@@ -18,7 +18,7 @@
   flex-direction: column;
   height: 100vh;
   transform-style: preserve-3d;
-  transform: rotateY(0) rotateX(0);
+  transform: rotateY(160deg) rotateX(20deg);
   /* animation: rotate 3s linear infinite forwards; */
 }
 .head {
@@ -33,7 +33,7 @@
   transform: translateZ(-5px);
 }
 .right-hand{
-  transform: translateX(-15px) rotate(-20deg);
+  transform: translateX(-15px) translateY(4px) rotate(90deg);
   & .arm {
     position: absolute;
     top: 0;
@@ -41,9 +41,10 @@
     transform: translateX(-50%) rotateZ(70deg) translateZ(-1px);
     transform-origin: 0 0;
   }
+  /* animation: rotateRight 3s linear infinite forwards; */
 }
 .left-hand {
-  transform: translateX(15px) rotate(20deg);
+  transform: translateX(15px) translateY(-4px) rotate(20deg);
   & .arm {
     position: absolute;
     top: 0;
@@ -53,7 +54,6 @@
   }
 }
 .chest {
-  /* display: none; */
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -61,19 +61,18 @@
 .body {
   width: 100px;
   min-height: 20px;
-  /* background-color: blue; */
   position: relative;
 }
 .left-hand .hand {
   position: absolute;
   top: calc(100% - 10px);
-  transform: rotate(30deg);
+  transform: rotate(40deg) translateY(-5px);
   transform-origin: 0 0;
 }
 .right-hand .hand {
   position: absolute;
   top: calc(100% - 10px);
-  transform: rotate(-30deg);
+  transform: rotate(-40deg) translateY(-5px);
   transform-origin: 100% 0;
 }
 
@@ -96,6 +95,18 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@keyframes rotateRight {
+  0%{
+    transform: translateX(-15px) translateY(4px) rotate(-10deg);
+  }
+  50%{
+    transform: translateX(-15px) translateY(4px) rotate(90deg);
+  }
+  100%{
+    transform: translateX(-15px) translateY(4px) rotate(-10deg);
+  }
 }
 
 @keyframes App-logo-spin {
