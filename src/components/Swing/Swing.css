@@ -1,0 +1,53 @@
+.swing{
+    width: 600px;
+    height: 100vh;
+    margin: 50px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+.horizontal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display: none; */
+}
+.stand1{
+    transform: rotateY(25deg);
+    position: absolute;
+    top: 0;
+    transform-origin: 0 0;
+}
+.stand2{
+    position: absolute;
+    top: 0;
+    transform: rotateY(-25deg);
+    transform-origin: 0 0;
+
+}
+.stands{
+    position: absolute;
+    inset: 0;
+    top: 0;
+    left: 0;
+    transform: rotateZ(90deg);
+    transform-origin: 0 0;
+}
+.stands-two{
+    position: absolute;
+    inset: 0;
+    top: 0;
+    right: 0;
+    /* background-color: blue; */
+    transform: rotateZ(90deg) translateZ(730px);
+    transform-origin: 0 0;
+}
+
+@keyframes rotate3 {
+    from{
+        transform: rotateX(0deg);
+    }
+    to{
+        transform: rotateX(360deg);
+    }
+}

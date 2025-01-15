@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  transform: rotateY(40deg) rotateX(0deg); 
 }
 * {
   transform-style: preserve-3d;
@@ -18,7 +19,6 @@
   flex-direction: column;
   height: 100vh;
   transform-style: preserve-3d;
-  transform: rotateY(10deg) rotateX(10deg);
   animation: rotate 3s linear infinite forwards;
 }
 .head {
@@ -26,7 +26,7 @@
   position: relative;
   background-color: blue;
   width: fit-content;
-  /* transform: translateZ(-15px); */
+  transform: translateZ(5px);
   /* Translation logic => full width area, which is 30px. Translation = half of full width - half of cube stretch */
 }
 .neck {
