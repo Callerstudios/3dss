@@ -57,7 +57,6 @@
 .seat{
     position: absolute;
     right: 0;
-    transform: rotateZ(90deg) translateZ(50px);
     width: 20px;
     height: 20px;
 }

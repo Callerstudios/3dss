@@ -1,45 +1,75 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Box from "../Box/Box";
-import faceImage from "../../IMAGES/face.jpg"
 
 const Human = () => {
+  const [width, setWidth] = useState(window.innerWidth / 27);
+  const handleResize = () => {
+    setWidth(window.innerWidth / 27);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    console.log(width);
+  }, []);
+
   return (
     <div>
       <div className="human">
         <div className="head">
-          <Box width="50px" height="50px" stretch="30px" faceImage={true} hair={true}/>
+          <Box
+            width={width + "px"}
+            height={width + "px"}
+            stretch={(width / 5) * 3 + "px"}
+            faceImage={true}
+            hair={true}
+          />
         </div>
         <div className="neck">
-          <Box width="20px" height="15px" stretch="10px" />
+          <Box
+            width={width / 2 + "px"}
+            height={(width / 5) * 1.5 + "px"}
+            stretch={width / 5 + "px"}
+          />
         </div>
-        <div className="body">
+        <div className="body" style={{ height: `${width * 2}px` }}>
           <div className="left-hand">
             <div className="arm">
-              <Box width="19px" height="50px" stretch="20px" />
+              <Box
+                width={width / 2.5 + "px"}
+                height={width + "px"}
+                stretch={width / 2.5 + "px"}
+              />
               <div className="hand">
-                <Box width="20px" height="60px" stretch="20px" />
+                <Box
+                  width={width / 2.5 + "px"}
+                  height={width * 1.1 + "px"}
+                  stretch={width / 2.5 + "px"}
+                />
               </div>
             </div>
           </div>
           <div className="chest">
-            <Box width="60px" height="100px" stretch="20px" />
+            <Box
+              width={width * 1.1 + "px"}
+              height={width * 2 + "px"}
+              stretch="20px"
+            />
           </div>
           <div className="right-hand">
             <div className="arm">
-              <Box width="20px" height="50px" stretch="20px" />
+              <Box width={width/2.5 + 'px'} height={width + "px"} stretch={width/2.5 + 'px'} />
               <div className="hand">
-                <Box width="20px" height="60px" stretch="20px" />
+                <Box width={width/2.5 + 'px'} height={width * 1.1 + 'px'} stretch={width/2.5 + 'px'} />
               </div>
             </div>
           </div>
         </div>
         <div className="top-legs">
-          <Box width="20px" height="60px" stretch="20px" />
-          <Box width="20px" height="60px" stretch="20px" />
-        <div className="bottom-legs">
-          <Box width="20px" height="60px" stretch="20px" />
-          <Box width="20px" height="60px" stretch="20px" />
-        </div>
+          <Box width={width/2.5 + 'px'} height={width * 1.1 + "px"} stretch={width/2.5 + 'px'} />
+          <Box width={width/2.5 + 'px'} height={width * 1.1 + "px"} stretch={width/2.5 + 'px'} />
+          <div className="bottom-legs" style={{height: width * 1.1 + "px"}}>
+            <Box width={width/2.5 + 'px'} height={width * 1.1 + "px"} stretch={width/2.5 + 'px'} />
+            <Box width={width/2.5 + 'px'} height={width * 1.1 + "px"} stretch={width/2.5 + 'px'} />
+          </div>
         </div>
       </div>
     </div>

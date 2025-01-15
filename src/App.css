@@ -84,24 +84,23 @@
 }
 .body {
   width: 100px;
-  min-height: 100px;
   position: relative;
+  /* background-color: blue; */
 }
 .left-hand .hand {
   position: absolute;
-  top: calc(100% - 10px);
+  top: calc(100%);
   transform: rotate(40deg) translateY(-5px);
   transform-origin: 0 0;
 }
 .right-hand .hand {
   position: absolute;
-  top: calc(100% - 10px);
+  top: calc(100%);
   transform: rotate(-40deg) translateY(-5px);
   transform-origin: 100% 0;
 }
 .top-legs{
   width: 60px;
-  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -110,12 +109,12 @@
   transform-origin: 0 0;
 }
 .bottom-legs{
+  /* background-color: blue; */
   transition: 1s;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 60px;
-  height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

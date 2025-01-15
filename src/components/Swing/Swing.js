@@ -8,8 +8,7 @@ const Swing = () => {
   const handleResize = () => {
     setWidth(window.innerWidth / 2);
   };
-  useEffect(() => console.log(width), []);
-  window.addEventListener("resize", handleResize);
+  useEffect(() => window.addEventListener("resize", handleResize), [])
   return (
     <div className="swing">
       <div className="horizontal">
@@ -37,17 +36,34 @@ const Swing = () => {
         </div>
       </div>
       <div className="rope">
-        <div className="left" style={{transform: `rotateZ(90deg) translateY(${(-width/2) -(width/6)}px)`}}>
+        <div
+          className="left"
+          style={{
+            transform: `rotateZ(90deg) translateY(${-width / 2 - width / 6}px)`,
+          }}
+        >
           <Box width={width * 0.5 + "px"} height="10px" stretch="10px" />
         </div>
-        <div className="right" style={{transform: `rotateZ(90deg) translateY(${(-width/2) +(width/6) }px)`}}>
+        <div
+          className="right"
+          style={{
+            transform: `rotateZ(90deg) translateY(${-width / 2 + width / 6}px)`,
+          }}
+        >
           <Box width={width * 0.5 + "px"} height="10px" stretch="10px" />
-          <div className="seat">
-            <Box width={width * 0.2 + "px"} height="10px" stretch="100px" />
+          <div
+            className="seat"
+            style={{ transform: `rotateZ(-90deg) translateZ(${width / 10}px)` }}
+          >
+            <Box
+              width={width / 3 + "px"}
+              height="10px"
+              stretch={width / 6 + "px"}
+            />
           </div>
-          {/* <div className="human2">
+          <div className="human2">
             <Human />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
