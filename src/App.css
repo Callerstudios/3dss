@@ -16,6 +16,7 @@
   inset: 0;
   background-color: black;
   transform: translateZ(-1000px);
+  /* background-size: 10px 10px; */
   background-image: url(./IMAGES/night-sky.jpg);
   background-size: contain;
 }

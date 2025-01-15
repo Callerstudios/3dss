@@ -26,6 +26,10 @@
     background: linear-gradient(to bottom, yellow, blue);
     /* background-color: blue; */
   }
+  .face{
+    background-image: url(../../IMAGES/face.jpg);
+    background-size: cover;
+  }
   & .right-face {
     width: var(--stretch);
     height: var(--height);
