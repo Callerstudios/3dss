@@ -18,13 +18,9 @@
   .back-face {
     position: absolute;
     inset: 0;
-    /* border: 1px solid black; */
-
-    /* transform: rotateY(45deg); */
   }
   .front-face {
     background: linear-gradient(to bottom, yellow, blue);
-    /* background-color: blue; */
   }
   .face{
     background-image: url(../../IMAGES/face.jpg);

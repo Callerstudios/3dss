@@ -5,6 +5,10 @@
   height: 100vh;
   margin: 0;
   padding-top: 50px;
+  width: fit-content;
+  min-width: 100%;
+  /* overflow: hidden; */
+  /* min-height: 100vh; */
   /* animation: rotate 3s linear infinite forwards; */
 }
 .all{
@@ -14,11 +18,12 @@
 .abs{
   position: absolute;
   inset: 0;
-  background-color: black;
+  min-height: 100vh;
+  width: 100%;
   transform: translateZ(-1000px);
   /* background-size: 10px 10px; */
   background-image: url(./IMAGES/night-sky.jpg);
-  background-size: contain;
+  background-size: cover;
 }
 * {
   transform-style: preserve-3d;
