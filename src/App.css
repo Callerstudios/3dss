@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  transform: rotateY(40deg) rotateX(0deg); 
+  transform: rotateY(30deg) rotateX(0deg);
+  /* animation: rotate 3s linear infinite forwards; */
 }
 * {
   transform-style: preserve-3d;
@@ -19,7 +20,6 @@
   flex-direction: column;
   height: 100vh;
   transform-style: preserve-3d;
-  animation: rotate 3s linear infinite forwards;
 }
 .head {
   z-index: 10;

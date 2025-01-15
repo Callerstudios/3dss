@@ -10,10 +10,11 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
     /* display: none; */
 }
 .stand1{
-    transform: rotateY(25deg);
+    transform: rotateY(15deg);
     position: absolute;
     top: 0;
     transform-origin: 0 0;
@@ -21,7 +22,7 @@
 .stand2{
     position: absolute;
     top: 0;
-    transform: rotateY(-25deg);
+    transform: rotateY(-15deg);
     transform-origin: 0 0;
 
 }
@@ -39,15 +40,53 @@
     top: 0;
     right: 0;
     /* background-color: blue; */
-    transform: rotateZ(90deg) translateZ(730px);
+    z-index: 0;
+    transform: rotateZ(90deg) translateY(calc(-100% + 85px));
+    transform-origin: 0 0;
+}
+.rope{
+    position: absolute;
+    inset: 0;
+    transform-origin: 0 0;
+    /* animation: swing 3s ease-in-out infinite alternate-reverse; */
+}
+.left, .right{
+    transition: 2s;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform-origin: 0 0;    
+}
+.left{
+    /* background-color: blue; */
+    width: 400px;
+    height: 200px;
+    transform: rotateZ(90deg) translateY(100px);
+}
+.right{
+    transform: rotateZ(90deg) translateY(-100px);
+}
+.seat{
+    position: absolute;
+    right: 0;
+    transform: rotateZ(90deg) translateZ(50px);
+    width: 20px;
+    height: 20px;
+    /* background-color: red; */
+}
+.human2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateZ(-90deg);
     transform-origin: 0 0;
 }
 
-@keyframes rotate3 {
-    from{
-        transform: rotateX(0deg);
+@keyframes swing {
+    0%{
+        transform: rotateX(-30deg);
     }
-    to{
-        transform: rotateX(360deg);
+    100%{
+        transform: rotateX(30deg);
     }
 }

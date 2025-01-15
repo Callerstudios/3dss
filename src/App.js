@@ -6,7 +6,7 @@ import Box from "./components/Box/Box";
 function App() {
   return (
     <div className="App">
-      {/* <Human/>` */}
+      <Human/>`
       <Swing/>
     </div>
   );

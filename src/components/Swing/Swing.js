@@ -1,6 +1,7 @@
 import React from "react";
 import Box from "../Box/Box";
 import "./Swing.css";
+import Human from "../Human/Human";
 
 const Swing = () => {
   return (
@@ -22,6 +23,20 @@ const Swing = () => {
         </div>
         <div className="stand2">
           <Box width="500px" height="10px" stretch="10px" />
+        </div>
+      </div>
+      <div className="rope">
+        <div className="left">
+          <Box width="350px" height="10px" stretch="10px" />
+        </div>
+        <div className="right">
+          <Box width="350px" height="10px" stretch="10px" />
+          <div className="seat">
+            <Box width="200px" height="10px" stretch="100px" />
+          </div>
+          <div className="human2">
+            <Human />
+          </div>
         </div>
       </div>
     </div>
