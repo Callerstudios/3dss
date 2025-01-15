@@ -6,8 +6,10 @@ import Box from "./components/Box/Box";
 function App() {
   return (
     <div className="App">
-      <Human/>`
-      <Swing/>
+      <div className="abs"></div>
+      <div className="all">
+        <Swing />
+      </div>
     </div>
   );
 }

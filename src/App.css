@@ -1,7 +1,23 @@
 .App {
+  position: relative;
   text-align: center;
-  transform: rotateY(30deg) rotateX(0deg);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding-top: 50px;
   /* animation: rotate 3s linear infinite forwards; */
+}
+.all{
+  transform: rotateY(-60deg) rotateX(-5deg);
+
+}
+.abs{
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  transform: translateZ(-1000px);
+  background-image: url(./IMAGES/night-sky.jpg);
+  background-size: contain;
 }
 * {
   transform-style: preserve-3d;
@@ -26,14 +42,16 @@
   position: relative;
   background-color: blue;
   width: fit-content;
-  transform: translateZ(5px);
+  transform: translateZ(5px) rotateX(10deg);
+  transform-origin: 100% 100%;
+  animation: rotateHead 3s ease-in-out infinite alternate-reverse;
   /* Translation logic => full width area, which is 30px. Translation = half of full width - half of cube stretch */
 }
 .neck {
   transform: translateZ(-5px);
 }
 .right-hand {
-  transform: translateX(-15px) translateY(-4px) rotate(-20deg);
+  transform: translateX(-15px) translateY(-4px) rotateZ(-10deg);
   & .arm {
     position: absolute;
     top: 0;
@@ -44,7 +62,7 @@
   /* animation: rotateRight 3s linear infinite forwards; */
 }
 .left-hand {
-  transform: translateX(15px) translateY(-4px) rotate(20deg);
+  transform: translateX(15px) translateY(-4px) rotateY(-10deg);
   & .arm {
     position: absolute;
     top: 0;
@@ -75,12 +93,28 @@
   transform: rotate(-40deg) translateY(-5px);
   transform-origin: 100% 0;
 }
-.legs{
+.top-legs{
   width: 60px;
   height: 60px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  transform: rotateX(90deg);
+  position: relative;
+  transform-origin: 0 0;
+}
+.bottom-legs{
+  transition: 1s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transform-origin: 100% 100%;
+  transform: rotateX(90deg);
 }
 
 @keyframes rotateRight {
@@ -92,6 +126,14 @@
   }
   100% {
     transform: translateX(-15px) translateY(4px) rotate(-10deg);
+  }
+}
+@keyframes rotateHead {
+  from{
+    transform: translateZ(5px) rotateX(-20deg);
+  }
+  to{
+    transform: translateZ(5px) rotateX(20deg);
   }
 }
 
