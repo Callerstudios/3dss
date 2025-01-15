@@ -7,7 +7,7 @@ const Human = () => {
     <div>
       <div className="human">
         <div className="head">
-          <Box width="50px" height="50px" stretch="30px" faceImage={true} />
+          <Box width="50px" height="50px" stretch="30px" faceImage={true} hair={true}/>
         </div>
         <div className="neck">
           <Box width="20px" height="15px" stretch="10px" />

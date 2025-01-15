@@ -14,7 +14,7 @@ const Box = (props) => {
       <div className={props.faceImage ? "front-face face" : "front-face"}></div>
       <div className="left-face"></div>
       <div className="right-face"></div>
-      <div className="top-face"></div>
+      <div className={props.faceImage ? "top-face hair" : "top-face"}></div>
       <div className="bottom-face"></div>
       <div className="back-face"></div>
     </div>

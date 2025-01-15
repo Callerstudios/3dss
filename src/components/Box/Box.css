@@ -1,5 +1,5 @@
 :root {
-  --color: blue;
+  --color: #B5C0C9;
 }
 .box {
   /* perspective: 3000px; */
@@ -56,10 +56,13 @@
     transform: rotateX(90deg) translateY(calc(-1 * var(--stretch)));
     transform-origin: 0 0;
   }
+  .hair{
+    background-color: black;
+  }
   & .bottom-face {
     width: var(--width);
     height: var(--stretch);
-    background-color: red;
+    background-color: #B5C0C9;
     transform: rotateX(-90deg) translateZ(var(--height));
     transform-origin: 0 0;
   }
