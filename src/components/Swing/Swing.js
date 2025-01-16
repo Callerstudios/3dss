@@ -21,14 +21,14 @@ const Swing = () => {
       }}
     >
       <div className="horizontal">
-        <Box width={width + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+        <Box width={width + "px"} height={width / 50 + "px"} stretch={width / 16 + "px"} />
       </div>
       <div className="stands">
         <div className="stand1">
-          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"} />
         </div>
         <div className="stand2">
-          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"} />
         </div>
       </div>
       <div
@@ -38,10 +38,10 @@ const Swing = () => {
         }}
       >
         <div className="stand1">
-          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"} />
         </div>
         <div className="stand2">
-          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+          <Box width={width * 0.9 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"} />
         </div>
       </div>
       <div className="rope">
@@ -51,7 +51,7 @@ const Swing = () => {
             transform: `rotateZ(90deg) translateY(${-width / 2 - width / 6}px)`,
           }}
         >
-          <Box width={width * 0.5 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"}/>
+          <Box width={width * 0.5 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"}/>
         </div>
         <div
           className="right"
@@ -59,7 +59,7 @@ const Swing = () => {
             transform: `rotateZ(90deg) translateY(${-width / 2 + width / 6}px)`,
           }}
         >
-          <Box width={width * 0.5 + "px"} height={width / 16 + "px"} stretch={width / 16 + "px"} />
+          <Box width={width * 0.5 + "px"} height={width / 16 + "px"} stretch={width / 50 + "px"} />
           <div
             className="seat"
             style={{ transform: `rotateZ(-90deg) translateZ(${width / 11}px)` }}
