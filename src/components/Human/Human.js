@@ -51,7 +51,7 @@ const Human = () => {
             <Box
               width={width * 1.1 + "px"}
               height={width * 2 + "px"}
-              stretch="20px"
+              stretch={width / 2.5 + "px"}
             />
           </div>
           <div className="right-hand">

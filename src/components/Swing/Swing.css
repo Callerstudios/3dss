@@ -1,75 +1,80 @@
-.swing{
-    width: 600px;
-    /* height: 100vh; */
-    margin: 0 auto 0 auto;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+.swing {
+  width: 600px;
+  /* height: 100vh; */
+  margin: 0 auto 0 auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
 }
-.horizontal{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+.horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-.stand1{
-    transform: rotateY(15deg);
-    position: absolute;
-    top: 0;
-    transform-origin: 0 0;
+.stand1 {
+  transform: rotateY(15deg);
+  position: absolute;
+  top: 0;
+  transform-origin: 0 0;
 }
-.stand2{
-    position: absolute;
-    top: 0;
-    transform: rotateY(-15deg);
-    transform-origin: 0 0;
-
+.stand2 {
+  position: absolute;
+  top: 0;
+  transform: rotateY(-15deg);
+  transform-origin: 0 0;
 }
-.stands{
-    position: absolute;
-    inset: 0;
-    top: 0;
-    left: 0;
-    transform: rotateZ(90deg);
-    transform-origin: 0 0;
+.stands {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: 0;
+  transform: rotateZ(90deg);
+  transform-origin: 0 0;
 }
-.stands-two{
-    position: absolute;
-    inset: 0;
-    top: 0;
-    right: 0;
-    z-index: 0;
-    transform-origin: 0 0;
+.stands-two {
+  position: absolute;
+  inset: 0;
+  top: 0;
+  right: 0;
+  z-index: 0;
+  transform-origin: 0 0;
 }
-.rope{
-    position: absolute;
-    inset: 0;
-    transform-origin: 0 0;
-    animation: swing 3s ease-in-out infinite alternate-reverse;
+.rope {
+  position: absolute;
+  inset: 0;
+  transform-origin: 0 0;
+  animation: swing 3s ease-in-out infinite alternate-reverse;
 }
-.left, .right{
-    transition: 2s;
-    position: absolute;
-    top: 0;
-    /* left: 50%; */
-    transform-origin: 0 0;    
+.left,
+.right {
+  transition: 2s;
+  position: absolute;
+  top: 0;
+  /* left: 50%; */
+  transform-origin: 0 0;
 }
-.seat{
-    position: absolute;
-    right: 0;
-    width: 20px;
-    /* background-color: blue; */
+.seat {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  /* background-color: blue; */
 }
-.human2{
-    position: absolute;
-    transform-origin: 0 0;
+.human2 {
+  position: absolute;
+  transform-origin: 0 0;
 }
 
 @keyframes swing {
-    0%{
-        transform: rotateX(-30deg);
-    }
-    100%{
-        transform: rotateX(30deg);
-    }
+  0% {
+    transform: rotateX(-30deg);
+  }
+  100% {
+    transform: rotateX(30deg);
+  }
+}
+@media (max-width: 450px) {
+  .human2 {
+    transform: translateX(0px);
+  }
 }
