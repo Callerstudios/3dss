@@ -1,13 +1,23 @@
 import "./App.css";
+import { useState, useEffect } from "react";
 import Human from "./components/Human/Human";
 import Swing from "./components/Swing/Swing";
 import Box from "./components/Box/Box";
 
 function App() {
+    const [width, setWidth] = useState(window.innerWidth);
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+    useEffect(() => {
+      window.addEventListener("resize", handleResize);
+      console.log(width);
+    }, []);
   return (
     <div className="App">
-      <div className="abs"></div>
-      <div className="all">
+      <div className="abs2" style={{height: width + 'px'}}></div>
+      <div className="abs" style={{width: width + 'px', height: width/4 + 'px'}}></div>
+      <div className="all" style={{width: width + 'px'}}>
         <Swing />
       </div>
     </div>
