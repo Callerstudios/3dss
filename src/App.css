@@ -8,6 +8,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  background-color: black;
   justify-content: center;
 }
 .all{
@@ -16,18 +17,22 @@
 .abs2{
   position: absolute;
   inset: 0;
+  /* top: 0;
+  width: 100%;
+  height: 100vh; */
   background-image: url(./IMAGES/night-sky.jpg);
+  transform: translateZ(-1001px);
   background-size: cover;
   filter: blur(10px);
 }
 .abs{
   position: absolute;
-  transform:translateZ(-1000px);
+  transform:translateZ(-1000px) translate(-50%, -50%);
   top: 50%;
   left: 50%;
   /* background-size: 10px 10px; */
   background-image: url(./IMAGES/night-sky.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 * {

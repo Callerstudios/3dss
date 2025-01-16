@@ -10,7 +10,13 @@ const Swing = () => {
   };
   useEffect(() => window.addEventListener("resize", handleResize), []);
   return (
-    <div className="swing" style={{ height: Math.abs(Math.cos(15)*width) + "px" }}>
+    <div
+      className="swing"
+      style={{
+        height: Math.abs(Math.cos(15) * width) + "px",
+        marginLeft: Math.abs(Math.sin(15) * width),
+      }}
+    >
       <div className="horizontal">
         <Box width={width + "px"} height="10px" stretch="10px" />
       </div>

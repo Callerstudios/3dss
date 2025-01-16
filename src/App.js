@@ -15,8 +15,8 @@ function App() {
     }, []);
   return (
     <div className="App">
-      <div className="abs2" style={{height: width + 'px'}}></div>
-      <div className="abs" style={{width: width + 'px', height: width/4 + 'px'}}></div>
+      <div className="abs2"></div>
+      <div className="abs" style={{width: width/1.5 + 'px', height: width + 'px'}}></div>
       <div className="all" style={{width: width + 'px'}}>
         <Swing />
       </div>
