@@ -22,9 +22,9 @@
 }
 .abs{
   position: absolute;
-  transform:translateZ(-1000px) translateY(-50%);
+  transform:translateZ(-1000px);
   top: 50%;
-  left: 0;
+  left: 50%;
   /* background-size: 10px 10px; */
   background-image: url(./IMAGES/night-sky.jpg);
   background-size: contain;
